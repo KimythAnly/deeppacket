@@ -38,17 +38,18 @@ cool project
 
 Training
 分別運行以下四條就可以 train 出四個 model，每個 training 結果和過程都會保存在 models/ 底下
-python main.py -n cnn -t cnn -tt app -m train
+> python main.py -n cnn -t cnn -tt app -m train
 python main.py -n sae -t sae -tt app -m train
 python main.py -n cnn_c -t cnn -tt class -m train
 python main.py -n sae_c -t cnn -tt class -m train
 
 Testing
 分別運行以下四條就可以 test
-python main.py -n cnn -t cnn -tt app -m test
-python main.py -n sae -t sae -tt app -m test
-python main.py -n cnn_c -t cnn -tt class -m test
-python main.py -n sae_c -t cnn -tt class -m test
+
+    python main.py -n cnn -t cnn -tt app -m test
+    python main.py -n sae -t sae -tt app -m test
+    python main.py -n cnn_c -t cnn -tt class -m test
+    python main.py -n sae_c -t cnn -tt class -m test
 
 
 我們有將 model 保留下來，如果助教想直接 load 我們的 model，可以再聯絡我們，我們再將 model 上傳給助教下載。
