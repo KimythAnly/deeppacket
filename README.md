@@ -3,31 +3,34 @@ cool project
 
 
 1. 運行環境：
-OS:	Ubuntu 14.04.5 LTS
-CPU:	Intel(R) Xeon(R) CPU E5-2698 v4 @ 2.20GHz (80顆CPU)
-Mem:	503G
-GPU:	Tesla P100-SXM2-16GB
+    OS:	Ubuntu 14.04.5 LTS
+    CPU:	Intel(R) Xeon(R) CPU E5-2698 v4 @ 2.20GHz (80顆CPU)
+    Mem:	503G
+    GPU:	Tesla P100-SXM2-16GB
 
-Python 3.6.3 |Anaconda, Inc.| (default, Oct 13 2017, 12:02:49) [GCC 7.2.0] on linux
-scapy==2.4.0
-numpy==1.13.3
-scikit-learn==0.19.1
-Keras==2.1.3
-tensorflow==1.3.0
+    Python 3.6.3 |Anaconda, Inc.| (default, Oct 13 2017, 12:02:49) [GCC 7.2.0] on linux
+    scapy==2.4.0
+    numpy==1.13.3
+    scikit-learn==0.19.1
+    Keras==2.1.3
+    tensorflow==1.3.0
 
 2. Preprocessing:
-請助教至 https://drive.google.com/file/d/1vu79_SJoKbqMvdoK3Y7wXti1wUp5qzgw/view 下載完整的 pcap 資料夾(內含150個 .pcap 或 .pcapng 檔)，打開 prepro.py，在 line 101 找到 todo_list = gen_todo_list(‘../pcaps’) ，將’../pcaps’ 改成助教下載的 pcap 資料夾路徑之後，執行 
+    請助教至 https://drive.google.com/file/d/1vu79_SJoKbqMvdoK3Y7wXti1wUp5qzgw/view
+    
+    下載完整的 pcap 資料夾(內含150個 .pcap 或 .pcapng 檔)，打開 prepro.py，在 line 101 找到 todo_list = gen_todo_list(‘../pcaps’) ，將’../pcaps’ 改成助教下載的 pcap 資料夾路徑之後，執行 
 
-python prepro.py
+    > python prepro.py
 
-運行結束後，應該會產生300個 .pickle 檔，將 .pcap 檔案前處理成 numpy array。後綴 ‘_class’ 是表示 characterization 的 labels。
-由於 pcap 太大，有些環境沒辦法成功 preprocessing，如果助教有問題的話可以再聯絡我們，我們再上傳我們 preprocess 好的 .pickle 檔案讓助教執行。
+    運行結束後，應該會產生300個 .pickle 檔，將 .pcap 檔案前處理成 numpy array。後綴 ‘_class’ 是表示 characterization 的 labels。
+    
+    由於 pcap 太大，有些環境沒辦法成功 preprocessing，如果助教有問題的話可以再聯絡我們，我們再上傳我們 preprocess 好的 .pickle 檔案讓助教執行。
 
 
 3. Training/Testing:
-python main.py [-n <model name>] [-t <model type>] [-tt <task type>] [-m <mode>] [-bs <batch size>]
+    > python main.py [-n <model name>] [-t <model type>] [-tt <task type>] [-m <mode>] [-bs <batch size>]
 
-參數(詳見 utils.py: get_args() )：
+    參數(詳見 utils.py: get_args() )：
 
 
 
