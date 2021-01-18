@@ -55,5 +55,3 @@ python main.py -n sae -t sae -tt app -m test
 python main.py -n cnn_c -t cnn -tt class -m test
 python main.py -n sae_c -t cnn -tt class -m test
 ```
-
-我們有將 model 保留下來，如果助教想直接 load 我們的 model，可以再聯絡我們，我們再將 model 上傳給助教下載。
